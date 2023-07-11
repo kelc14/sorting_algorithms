@@ -30,6 +30,7 @@ function merge(a, b) {
 
 function mergeSort(arr) {
   // pop values off the end and compare -> add to new array one by one
+  
   // base case
   if (arr.length <= 1) return arr;
 
