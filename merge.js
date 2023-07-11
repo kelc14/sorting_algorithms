@@ -28,8 +28,17 @@ function merge(a, b) {
   return out;
 }
 
-function mergeSort() {
+function mergeSort(arr) {
   // pop values off the end and compare -> add to new array one by one
+  // base case
+  if (arr.length <= 1) return arr;
+
+  // normal case
+  const mid = Math.floor(arr.length / 2);
+  const left = mergeSort(arr.slice(0, mid));
+  const right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
 }
 
 module.exports = { merge, mergeSort };
